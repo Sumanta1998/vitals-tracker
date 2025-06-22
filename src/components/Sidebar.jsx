@@ -1,6 +1,6 @@
 // src/components/Sidebar.jsx
 import { Bell, Clock, Home } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const navItems = [
   { name: "Dashboard", icon: Home, to: "/" },
@@ -16,7 +16,9 @@ export default function Sidebar({ isOpen, setIsOpen }) {
     ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
     >
       <div className="p-6 border-b border-blue-200">
-        <h2 className="text-xl font-bold text-gray-800">Vitals Tracker</h2>
+        <Link to="/" className="text-xl font-bold text-gray-800">
+          Vitals Tracker
+        </Link>{" "}
       </div>
       <nav className="mt-6 mx-4 p-4 bg-white rounded-md shadow-lg border border-blue-200 space-y-3">
         {navItems.map((item) => (

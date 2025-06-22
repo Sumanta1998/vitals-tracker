@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import { AddVitalsModal } from "./AddVitalsModal";
 
@@ -36,7 +36,9 @@ export default function Layout() {
             </svg>
           </button>
 
-          <h2 className="text-xl font-bold text-gray-800">Vitals Tracker</h2>
+          <Link to="/" className="text-xl font-bold text-gray-800">
+            Vitals Tracker
+          </Link>
         </div>
 
         <main className="p-4">
